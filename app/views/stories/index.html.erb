@@ -1,0 +1,16 @@
+
+ 
+<% @stories.each do |story| %>
+Title: <%= story.title %>
+Description: <%= story.description %>
+Status: <%= story.status %>
+Owner: <%= story.user.email %>
+<%= link_to 'Edit', edit_story_path(story) %>
+<%= link_to 'Delete', story_path(story) ,method: :delete %>
+<br/>
+<br/>
+<% end %>
+
+ 
+
+<%= link_to 'New Story', new_story_path %>
