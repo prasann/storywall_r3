@@ -1,3 +1,37 @@
 // Place all the styles related to the stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.story-card{
+  float:left;
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+  margin-bottom: 20px;
+  min-height: 20px;
+  padding: 5px;
+
+  .title{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+  }
+
+  .description{
+    padding-top: 10px;
+  }
+
+  .action_buttons{
+    padding-top: 10px;
+    text-align: center;
+
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.drop-container{
+  clear:both;
+}

@@ -1,16 +1,12 @@
-
- 
 <% @stories.each do |story| %>
-Title: <%= story.title %>
-Description: <%= story.description %>
-Status: <%= story.status %>
-Owner: <%= story.user.email %>
-<%= link_to 'Edit', edit_story_path(story) %>
-<%= link_to 'Delete', story_path(story) ,method: :delete %>
-<br/>
-<br/>
+    <div draggable="true" class="story-card span3" ondragstart="drag(event)" id="<%= story.id %>">
+      <div class="title"><strong><%= story.title %></strong></div>
+      <div class="description"> <%= story.description %></div>
+      <div class="action_buttons">
+        <%= link_to 'Edit', edit_story_path(story), :class => "btn-small btn-primary" %>
+        <%= link_to 'Delete', story_path(story), :class => "btn-small btn-danger", method: :delete %>
+      </div>
+    </div>
 <% end %>
-
- 
-
-<%= link_to 'New Story', new_story_path %>
+<div class="drop-container well" ondrop="drop(event)" ondragover="allowDrop(event)" id="drop_container">
+</div>
